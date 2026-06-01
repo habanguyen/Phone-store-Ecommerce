@@ -1,0 +1,21 @@
+Route → Controller → Service → Model → Database
+models/ → ĐỊNH NGHĨA DATABASE
+controllers/ → XỬ LÝ REQUEST / RESPONSE
+services/ → XỬ LÝ LOGIC CHÍNH
+routes/ → ĐỊNH NGHĨA API
+middlewares/ → CHẶN / KIỂM TRA REQUEST
+utils/ → HÀM HỖ TRỢ
+config/ → CONFIG HỆ THỐNG
+
+| Layer      | Mục đích |
+| ---------- | -------- |
+| Model      | dữ liệu  |
+| Service    | logic    |
+| Controller | API      |
+| Route      | URL      |
+| Middleware | bảo mật  |
+
+
+
+Còn phần stripe key payment khi nào sang frontend sẽ test và thêm key ở env
+Bây giờ chia lại phần role admin và user 1 role khách nhau đang bị lẫn role

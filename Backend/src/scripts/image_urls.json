@@ -1,0 +1,63 @@
+{
+  "Samsung Galaxy S24 Ultra": [
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 15 Pro Max": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Xiaomi Redmi Note 13 Pro": [
+    "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-pro-1.jpg",
+    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Vivo X90 Pro": [
+    "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x90-pro-1.jpg",
+    "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x90-pro-2.jpg"
+  ],
+  "OPPO Find X7": [
+    "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-1.jpg",
+    "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x7-2.jpg"
+  ],
+  "Apple iPhone 16 Plus": [
+    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 13 mini": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-mini-2.jpg",
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-mini-3.jpg"
+  ],
+  "Apple iPhone 11 Pro Max": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-11-pro-max-4.jpg",
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-11-pro-max-5.jpg",
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-11-pro-max-6.jpg"
+  ],
+  "Apple iPhone SE (2022)": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-se-2022-1.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 15": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 14 Pro Max": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 13": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone 12 Pro Max": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-1.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone XS Max": [
+    "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-xs-max-5.jpg",
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80"
+  ],
+  "Apple iPhone XR": [
+    "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+  ]
+}

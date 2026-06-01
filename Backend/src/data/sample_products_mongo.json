@@ -1,0 +1,1966 @@
+[
+    {
+        "name": "Samsung Galaxy S24 Ultra",
+        "slug": "samsung-galaxy-s24-ultra",
+        "brand": "Samsung",
+        "category": "Smartphone",
+        "base_price": 29990000,
+        "sale_price": 27990000,
+        "thumbnail": "/uploads/samsung-s24-ultra-thumb.jpg",
+        "dimensions": {
+            "height": 162.3,
+            "width": 79.5,
+            "thickness": 8.9
+        },
+        "design_features": [
+            "Khung nhôm Armor",
+            "Mặt lưng kính Gorilla Glass Victus 2",
+            "Chống nước IP68"
+        ],
+        "material": "Khung nhôm, mặt lưng kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Snapdragon 8 Gen 3",
+                "gpu": "Adreno 750",
+                "ram": "12GB",
+                "rom_options": [
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Dynamic AMOLED 2X",
+                "screen_resolution": "3120 x 1440",
+                "screen_size": "6.8 inch",
+                "rear_camera": "200MP + 12MP + 10MP + 10MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "5000mAh",
+                "charging_tech": "Super Fast Charging 45W",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Cảm biến vân tay dưới màn hình, nhận diện khuôn mặt",
+                "special_features": [
+                    "S Pen",
+                    "Chế độ chụp đêm nâng cao"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "SSG-S24U-256B",
+                "color_name": "Phantom Black",
+                "color_code": "#000000",
+                "storage": "256GB",
+                "price": 27990000,
+                "stock": 18,
+                "images": [
+                    "/uploads/samsung-s24-ultra-1.jpg",
+                    "/uploads/samsung-s24-ultra-2.jpg",
+                    "/uploads/samsung-s24-ultra-3.jpg"
+                ]
+            },
+            {
+                "sku": "SSG-S24U-512B",
+                "color_name": "Phantom Silver",
+                "color_code": "#C0C0C0",
+                "storage": "512GB",
+                "price": 31990000,
+                "stock": 12,
+                "images": [
+                    "/uploads/samsung-s24-ultra-silver-1.jpg",
+                    "/uploads/samsung-s24-ultra-silver-2.jpg"
+                ]
+            }
+        ],
+        "description": "Samsung Galaxy S24 Ultra - flagship cao cấp với camera 200MP, màn hình HDR sáng, hiệu năng cực mạnh và pin dùng lâu.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Samsung Galaxy S24 Ultra - Điện thoại cao cấp",
+            "meta_description": "Mua Galaxy S24 Ultra chính hãng với giá tốt, camera 200MP, pin 5000mAh và hiệu năng mạnh mẽ."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 164
+        }
+    },
+    {
+        "name": "Apple iPhone 15 Pro Max",
+        "slug": "apple-iphone-15-pro-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 33990000,
+        "sale_price": 32990000,
+        "thumbnail": "/uploads/iphone-15-pro-max-256gb.jpg",
+        "dimensions": {
+            "height": 159.9,
+            "width": 76.7,
+            "thickness": 8.3
+        },
+        "design_features": [
+            "Khung titanium siêu nhẹ",
+            "Màn hình Ceramic Shield",
+            "Cổng USB-C"
+        ],
+        "material": "Titanium, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A17 Pro",
+                "gpu": "Apple GPU 6-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "256GB",
+                    "512GB",
+                    "1TB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR",
+                "screen_resolution": "2796 x 1290",
+                "screen_size": "6.7 inch",
+                "rear_camera": "48MP + 12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "4446mAh",
+                "charging_tech": "MagSafe, Fast Charging",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6E, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Action Button",
+                    "Dynamic Island"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP15PM-256SL",
+                "color_name": "Silver",
+                "color_code": "#C0C0C0",
+                "storage": "256GB",
+                "price": 32990000,
+                "stock": 22,
+                "images": [
+                    "/uploads/iphone-15-pro-max-256gb.jpg"
+                ]
+            },
+            {
+                "sku": "APL-IP15PM-512BL",
+                "color_name": "Deep Blue",
+                "color_code": "#002F6C",
+                "storage": "512GB",
+                "price": 36990000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-15-pro-max-blue-1.jpg",
+                    "/uploads/iphone-15-pro-max-blue-2.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 15 Pro Max với chip A17 Pro, camera 48MP, khung titanium và hiệu suất đồ họa cao cấp.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "iPhone 15 Pro Max - Apple chính hãng",
+            "meta_description": "iPhone 15 Pro Max chính hãng, màu Deep Blue và Silver, hiệu năng mạnh mẽ, camera chuyên nghiệp."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 124
+        }
+    },
+    {
+        "name": "Xiaomi Redmi Note 13 Pro",
+        "slug": "xiaomi-redmi-note-13-pro",
+        "brand": "Xiaomi",
+        "category": "Smartphone",
+        "base_price": 8990000,
+        "sale_price": 7990000,
+        "thumbnail": "/uploads/redmi-note-13-pro-thumb.jpg",
+        "dimensions": {
+            "height": 160.4,
+            "width": 74.3,
+            "thickness": 7.8
+        },
+        "design_features": [
+            "Mặt lưng kính bóng",
+            "Khung kim loại",
+            "Thiết kế mỏng nhẹ"
+        ],
+        "material": "Kính + kim loại",
+        "specifications": {
+            "performance": {
+                "cpu": "Snapdragon 7s Gen 2",
+                "gpu": "Adreno 712",
+                "ram": "8GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "OLED",
+                "screen_resolution": "2800 x 1260",
+                "screen_size": "6.67 inch",
+                "rear_camera": "200MP + 8MP + 2MP",
+                "front_camera": "16MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "5000mAh",
+                "charging_tech": "120W Fast Charge",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 Nano-SIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Cảm biến vân tay cạnh bên",
+                "special_features": [
+                    "Sạc nhanh 120W",
+                    "Loa kép stereo"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "XMI-RN13P-128BL",
+                "color_name": "Nebula Black",
+                "color_code": "#121212",
+                "storage": "128GB",
+                "price": 7990000,
+                "stock": 30,
+                "images": [
+                    "/uploads/redmi-note-13-pro-black-1.jpg",
+                    "/uploads/redmi-note-13-pro-black-2.jpg"
+                ]
+            },
+            {
+                "sku": "XMI-RN13P-256SL",
+                "color_name": "Starlight Silver",
+                "color_code": "#B0B0B0",
+                "storage": "256GB",
+                "price": 8990000,
+                "stock": 20,
+                "images": [
+                    "/uploads/redmi-note-13-pro-silver-1.jpg"
+                ]
+            }
+        ],
+        "description": "Redmi Note 13 Pro nổi bật với camera 200MP, pin 5000mAh và sạc nhanh 120W, phù hợp cho người dùng trẻ.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "Redmi Note 13 Pro - Mua điện thoại Xiaomi",
+            "meta_description": "Redmi Note 13 Pro chính hãng với camera 200MP, sạc nhanh 120W, pin 5000mAh."
+        },
+        "ratings": {
+            "average_score": 4.5,
+            "review_count": 72
+        }
+    },
+    {
+        "name": "Vivo X90 Pro",
+        "slug": "vivo-x90-pro",
+        "brand": "Vivo",
+        "category": "Smartphone",
+        "base_price": 21990000,
+        "sale_price": 20490000,
+        "thumbnail": "/uploads/vivo-x90-pro-thumb.jpg",
+        "dimensions": {
+            "height": 164.7,
+            "width": 75.6,
+            "thickness": 8.5
+        },
+        "design_features": [
+            "Thiết kế cong mềm mại",
+            "Mặt lưng pha lê",
+            "Khung nhôm bóng"
+        ],
+        "material": "Kính + nhôm",
+        "specifications": {
+            "performance": {
+                "cpu": "MediaTek Dimensity 9300",
+                "gpu": "Immortalis-G715",
+                "ram": "12GB",
+                "rom_options": [
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "LTPO AMOLED",
+                "screen_resolution": "2800 x 1260",
+                "screen_size": "6.78 inch",
+                "rear_camera": "50MP + 48MP + 12MP",
+                "front_camera": "50MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "4810mAh",
+                "charging_tech": "120W FlashCharge",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 Nano-SIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.4"
+            },
+            "utilities": {
+                "security": "Cảm biến vân tay dưới màn hình",
+                "special_features": [
+                    "Ảnh Zeiss",
+                    "Chế độ Cinematic"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "VVO-X90P-256GR",
+                "color_name": "Glacier Blue",
+                "color_code": "#7FB8E2",
+                "storage": "256GB",
+                "price": 20490000,
+                "stock": 14,
+                "images": [
+                    "/uploads/vivo-x90-pro-blue-1.jpg",
+                    "/uploads/vivo-x90-pro-blue-2.jpg"
+                ]
+            }
+        ],
+        "description": "Vivo X90 Pro dành cho người dùng yêu thích chụp ảnh, trang bị camera Zeiss và màn hình LTPO sống động.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "Vivo X90 Pro - Điện thoại camera Zeiss",
+            "meta_description": "Vivo X90 Pro chính hãng với camera Zeiss, sạc 120W, màn hình LTPO."
+        },
+        "ratings": {
+            "average_score": 4.6,
+            "review_count": 45
+        }
+    },
+    {
+        "name": "OPPO Find X7",
+        "slug": "oppo-find-x7",
+        "brand": "OPPO",
+        "category": "Smartphone",
+        "base_price": 25990000,
+        "sale_price": 23990000,
+        "thumbnail": "/uploads/oppo-find-x7-thumb.jpg",
+        "dimensions": {
+            "height": 162.1,
+            "width": 75.4,
+            "thickness": 8.3
+        },
+        "design_features": [
+            "Mặt lưng kính đổi màu",
+            "Khung nhôm bóng",
+            "Cạnh viền mỏng"
+        ],
+        "material": "Kính và nhôm",
+        "specifications": {
+            "performance": {
+                "cpu": "Snapdragon 8 Gen 3",
+                "gpu": "Adreno 750",
+                "ram": "12GB",
+                "rom_options": [
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "LTPO AMOLED",
+                "screen_resolution": "2800 x 1260",
+                "screen_size": "6.82 inch",
+                "rear_camera": "50MP + 50MP + 64MP",
+                "front_camera": "32MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "5000mAh",
+                "charging_tech": "100W SuperVOOC",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 Nano-SIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.4"
+            },
+            "utilities": {
+                "security": "Cảm biến vân tay dưới màn hình",
+                "special_features": [
+                    "Chế độ chụp đêm AI",
+                    "Sạc siêu nhanh"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "OPP-FX7-256GN",
+                "color_name": "Glowing Green",
+                "color_code": "#69B76B",
+                "storage": "256GB",
+                "price": 23990000,
+                "stock": 20,
+                "images": [
+                    "/uploads/oppo-find-x7-green-1.jpg",
+                    "/uploads/oppo-find-x7-green-2.jpg"
+                ]
+            }
+        ],
+        "description": "OPPO Find X7 - flagship với thiết kế đổi màu, camera 3 ống kính cao cấp và sạc 100W.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "OPPO Find X7 - Smartphone cao cấp",
+            "meta_description": "OPPO Find X7 chính hãng, thiết kế đổi màu, sạc 100W, camera chất lượng."
+        },
+        "ratings": {
+            "average_score": 4.4,
+            "review_count": 54
+        }
+    },
+    {
+        "name": "Apple iPhone 16 Plus",
+        "slug": "apple-iphone-16-plus",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 25990000,
+        "sale_price": 24490000,
+        "thumbnail": "/uploads/iphone-16-plus-128gb.jpg",
+        "dimensions": {
+            "height": 160.9,
+            "width": 77.8,
+            "thickness": 7.8
+        },
+        "design_features": [
+            "Nút Action Button",
+            "Camera đặt dọc hỗ trợ Spatial Video",
+            "Kính pha màu mặt lưng"
+        ],
+        "material": "Nhôm, kính pha màu",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A18 Bionic",
+                "gpu": "Apple GPU 5-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2796 x 1290",
+                "screen_size": "6.7 inch",
+                "rear_camera": "48MP (Fusion) + 12MP (UltraWide)",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "4674mAh",
+                "charging_tech": "USB-C Fast Charge, MagSafe",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Apple Intelligence",
+                    "Điều khiển camera"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP16PL-128TL",
+                "color_name": "Teal",
+                "color_code": "#008080",
+                "storage": "128GB",
+                "price": 24490000,
+                "stock": 25,
+                "images": [
+                    "/uploads/iphone-16-plus-128gb.jpg",
+                    "/uploads/iphone-16-plus-128gb-2.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 16 Plus kết hợp giữa màn hình lớn, màu sắc rực rỡ và sức mạnh xử lý AI vượt trội.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "iPhone 16 Plus - Màn hình lớn, pin cực lâu",
+            "meta_description": "Mua iPhone 16 Plus chính hãng với chip A18 và nút Action Button mới."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 42
+        }
+    },
+    {
+        "name": "Apple iPhone 13 mini",
+        "slug": "apple-iphone-13-mini",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 18990000,
+        "sale_price": 13500000,
+        "thumbnail": "/uploads/iphone-13-mini.jpg",
+        "dimensions": {
+            "height": 131.5,
+            "width": 64.2,
+            "thickness": 7.65
+        },
+        "design_features": [
+            "Thiết kế nhỏ gọn bậc nhất",
+            "Camera chéo độc đáo",
+            "Dễ dàng sử dụng một tay"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A15 Bionic",
+                "gpu": "Apple GPU 4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2340 x 1080",
+                "screen_size": "5.4 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "2406mAh",
+                "charging_tech": "Sạc Lightning 20W",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Chế độ Cinematic",
+                    "Chống nước IP68"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP13M-128PI",
+                "color_name": "Pink",
+                "color_code": "#FFC0CB",
+                "storage": "128GB",
+                "price": 13500000,
+                "stock": 10,
+                "images": [
+                    "/uploads/iphone-13-mini.jpg",
+                    "/uploads/iphone-13-mini-2.jpg",
+                    "/uploads/iphone-13-mini-3.jpg"
+                ]
+            }
+        ],
+        "description": "Chiếc iPhone mini cuối cùng của Apple với sức mạnh khổng lồ trong một thân hình nhỏ bé.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone 13 mini - Điện thoại nhỏ gọn nhất",
+            "meta_description": "Sở hữu iPhone 13 mini chính hãng cuối cùng tại Việt Nam."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 95
+        }
+    },
+    {
+        "name": "Apple iPhone 11 Pro Max",
+        "slug": "apple-iphone-11-pro-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 29990000,
+        "sale_price": 10900000,
+        "thumbnail": "/uploads/iphone-11-pro-max.jpg",
+        "dimensions": {
+            "height": 158,
+            "width": 77.8,
+            "thickness": 8.1
+        },
+        "design_features": [
+            "Hệ thống 3 camera đầu tiên",
+            "Mặt lưng kính mờ (Matte)",
+            "Màu Midnight Green huyền thoại"
+        ],
+        "material": "Thép không gỉ, kính nhám",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A13 Bionic",
+                "gpu": "Apple GPU 4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "64GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2688 x 1242",
+                "screen_size": "6.5 inch",
+                "rear_camera": "12MP + 12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3969mAh",
+                "charging_tech": "Sạc nhanh 18W đi kèm",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "4G LTE",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Chế độ Deep Fusion",
+                    "Night Mode"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP11PM-256MG",
+                "color_name": "Midnight Green",
+                "color_code": "#4E5851",
+                "storage": "256GB",
+                "price": 11900000,
+                "stock": 8,
+                "images": [
+                    "/uploads/iphone-11-pro-max.jpg",
+                    "/uploads/iphone-11-pro-max-2.jpg",
+                    "/uploads/iphone-11-pro-max-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 11 Pro Max thiết lập tiêu chuẩn cho dòng 'Pro Max' với thời lượng pin vượt trội và 3 camera chuyên nghiệp.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone 11 Pro Max - Đỉnh cao 3 camera",
+            "meta_description": "Mua iPhone 11 Pro Max cũ giá rẻ, máy nguyên bản, hỗ trợ trả góp."
+        },
+        "ratings": {
+            "average_score": 4.6,
+            "review_count": 320
+        }
+    },
+    {
+        "name": "Apple iPhone SE (2022)",
+        "slug": "apple-iphone-se-2022",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 12990000,
+        "sale_price": 9990000,
+        "thumbnail": "/uploads/iphone-se-2022-thumb.jpg",
+        "dimensions": {
+            "height": 138.4,
+            "width": 67.3,
+            "thickness": 7.3
+        },
+        "design_features": [
+            "Nút Home vật lý với Touch ID",
+            "Thiết kế cổ điển từ iPhone 8",
+            "Kháng nước IP67"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A15 Bionic",
+                "gpu": "Apple GPU 4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "64GB",
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Retina HD LCD",
+                "screen_resolution": "1334 x 750",
+                "screen_size": "4.7 inch",
+                "rear_camera": "12MP",
+                "front_camera": "7MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "2018mAh",
+                "charging_tech": "Sạc nhanh 20W, sạc không dây",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Touch ID",
+                "special_features": [
+                    "Smart HDR 4",
+                    "Hỗ trợ 5G giá rẻ"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IPSE3-64RE",
+                "color_name": "(PRODUCT)RED",
+                "color_code": "#FF0000",
+                "storage": "64GB",
+                "price": 9990000,
+                "stock": 40,
+                "images": [
+                    "/uploads/iphone-se-red.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone SE 2022 là sự kết hợp giữa thiết kế hoài cổ và sức mạnh hiện đại của chip A15 Bionic.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone SE 3 (2022) - Nhỏ gọn nhưng mạnh mẽ",
+            "meta_description": "Mua iPhone SE 3 chính hãng giá tốt, hỗ trợ 5G, chip A15."
+        },
+        "ratings": {
+            "average_score": 4.5,
+            "review_count": 150
+        }
+    },
+    {
+        "name": "Apple iPhone 15",
+        "slug": "apple-iphone-15",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 22990000,
+        "sale_price": 19490000,
+        "thumbnail": "/uploads/iphone-15.jpg",
+        "dimensions": {
+            "height": 147.6,
+            "width": 71.6,
+            "thickness": 7.8
+        },
+        "design_features": [
+            "Dynamic Island",
+            "Mặt lưng kính pha màu",
+            "Cổng USB-C"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A16 Bionic",
+                "gpu": "5-core",
+                "ram": "6GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2556 x 1179",
+                "screen_size": "6.1 inch",
+                "rear_camera": "48MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3349mAh",
+                "charging_tech": "USB-C, MagSafe",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 eSIM hoặc 1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Dynamic Island",
+                    "Chân dung thế hệ mới"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP15-128PK",
+                "color_name": "Pink",
+                "color_code": "#F9D2D5",
+                "storage": "128GB",
+                "price": 19490000,
+                "stock": 40,
+                "images": [
+                    "/uploads/iphone-15.jpg",
+                    "/uploads/iphone-15-2.jpg",
+                    "/uploads/iphone-15-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 15 mang Dynamic Island và camera 48MP lên dòng tiêu chuẩn, cùng cổng sạc USB-C tiện lợi.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone 15 - USB-C và Dynamic Island",
+            "meta_description": "Mua iPhone 15 chính hãng giá tốt nhất."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 85
+        }
+    },
+    {
+        "name": "Apple iPhone 14 Pro Max",
+        "slug": "apple-iphone-14-pro-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 29990000,
+        "sale_price": 26500000,
+        "thumbnail": "/uploads/iphone-14-pro-max-thumb.jpg",
+        "dimensions": {
+            "height": 160.7,
+            "width": 77.6,
+            "thickness": 7.85
+        },
+        "design_features": [
+            "Dynamic Island đầu tiên",
+            "Màn hình luôn hiển thị (Always-on)",
+            "Camera 48MP"
+        ],
+        "material": "Thép không gỉ, kính nhám",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A16 Bionic",
+                "gpu": "5-core",
+                "ram": "6GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB",
+                    "1TB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "LTPO Super Retina XDR",
+                "screen_resolution": "2796 x 1290",
+                "screen_size": "6.7 inch",
+                "rear_camera": "48MP + 12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "4323mAh",
+                "charging_tech": "Sạc nhanh 27W",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Always-on Display",
+                    "Phát hiện va chạm"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP14PM-128DP",
+                "color_name": "Deep Purple",
+                "color_code": "#594F63",
+                "storage": "128GB",
+                "price": 26500000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-14-pm-purple.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 14 Pro Max là cuộc cách mạng về giao diện với Dynamic Island và màu Tím cực sang trọng.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "iPhone 14 Pro Max - Đỉnh cao công nghệ 2022",
+            "meta_description": "Sở hữu iPhone 14 Pro Max với Dynamic Island."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 210
+        }
+    },
+    {
+        "name": "Apple iPhone 13",
+        "slug": "apple-iphone-13",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 19990000,
+        "sale_price": 13990000,
+        "thumbnail": "/uploads/iphone-13.jpg",
+        "dimensions": {
+            "height": 146.7,
+            "width": 71.5,
+            "thickness": 7.65
+        },
+        "design_features": [
+            "Camera đặt chéo",
+            "Tai thỏ nhỏ gọn",
+            "Pin cải tiến mạnh"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A15 Bionic",
+                "gpu": "4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2532 x 1170",
+                "screen_size": "6.1 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3227mAh",
+                "charging_tech": "MagSafe",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Cinematic Mode",
+                    "IP68"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP13-128ST",
+                "color_name": "Starlight",
+                "color_code": "#F9F6EF",
+                "storage": "128GB",
+                "price": 13990000,
+                "stock": 55,
+                "images": [
+                    "/uploads/iphone-13.jpg",
+                    "/uploads/iphone-13-2.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 13 là mẫu smartphone bán chạy nhất nhờ sự cân bằng giữa hiệu năng, pin và giá thành.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone 13 - Hiệu năng mạnh, giá hợp lý",
+            "meta_description": "Mua iPhone 13 chính hãng, pin bền, camera sắc nét."
+        },
+        "ratings": {
+            "average_score": 4.9,
+            "review_count": 1500
+        }
+    },
+    {
+        "name": "Apple iPhone 12 Pro Max",
+        "slug": "apple-iphone-12-pro-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 28990000,
+        "sale_price": 14500000,
+        "thumbnail": "/uploads/iphone-12-pro-max-thumb.jpg",
+        "dimensions": {
+            "height": 160.8,
+            "width": 78.1,
+            "thickness": 7.4
+        },
+        "design_features": [
+            "Cạnh vuông phẳng",
+            "Cảm biến LiDAR",
+            "Màu Pacific Blue"
+        ],
+        "material": "Thép không gỉ, kính nhám",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A14 Bionic",
+                "gpu": "4-core",
+                "ram": "6GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_size": "6.7 inch",
+                "rear_camera": "12MP + 12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3687mAh",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Chụp đêm LiDAR",
+                    "Apple ProRAW"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP12PM-128PB",
+                "color_name": "Pacific Blue",
+                "color_code": "#28444E",
+                "storage": "128GB",
+                "price": 14500000,
+                "stock": 12,
+                "images": [
+                    "/uploads/iphone-12-pm-blue.jpg"
+                ]
+            }
+        ],
+        "description": "Chiếc iPhone đầu tiên hỗ trợ 5G với thiết kế vuông vức định hình phong cách Apple hiện đại.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone 12 Pro Max - Đẳng cấp thép không gỉ",
+            "meta_description": "iPhone 12 Pro Max cũ giá rẻ, cam kết nguyên bản."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 450
+        }
+    },
+    {
+        "name": "Apple iPhone XS Max",
+        "slug": "apple-iphone-xs-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 26990000,
+        "sale_price": 7200000,
+        "thumbnail": "/uploads/iphone-xs-max-thumb.jpg",
+        "dimensions": {
+            "height": 157.5,
+            "width": 77.4,
+            "thickness": 7.7
+        },
+        "design_features": [
+            "Màn hình lớn OLED",
+            "Khung thép bóng bẩy",
+            "Màu Gold đặc trưng"
+        ],
+        "material": "Thép không gỉ, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A12 Bionic",
+                "gpu": "4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "64GB",
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina OLED",
+                "screen_size": "6.5 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "7MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3174mAh",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "4G LTE"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Smart HDR",
+                    "Dual SIM"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IPXSM-64GD",
+                "color_name": "Gold",
+                "color_code": "#D4AF37",
+                "storage": "64GB",
+                "price": 7200000,
+                "stock": 20,
+                "images": [
+                    "/uploads/iphone-xs-max-gold.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone XS Max là bản nâng cấp hoàn hảo của iPhone X với màn hình lớn hơn và hiệu năng mạnh mẽ.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone XS Max - Sang trọng và đẳng cấp",
+            "meta_description": "Mua iPhone XS Max cũ giá tốt nhất thị trường."
+        },
+        "ratings": {
+            "average_score": 4.6,
+            "review_count": 800
+        }
+    },
+    {
+        "name": "Apple iPhone XR",
+        "slug": "apple-iphone-xr",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 19990000,
+        "sale_price": 4900000,
+        "thumbnail": "/uploads/iphone-xr-thumb.jpg",
+        "dimensions": {
+            "height": 150.9,
+            "width": 75.7,
+            "thickness": 8.3
+        },
+        "design_features": [
+            "Đa dạng màu sắc",
+            "Pin cực trâu thời điểm ra mắt",
+            "Màn hình tràn viền giá rẻ"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A12 Bionic",
+                "ram": "3GB",
+                "rom_options": [
+                    "64GB",
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Liquid Retina LCD",
+                "screen_size": "6.1 inch",
+                "rear_camera": "12MP",
+                "front_camera": "7MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "2942mAh",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "4G LTE"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Haptic Touch",
+                    "Chống nước IP67"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IPXR-64OR",
+                "color_name": "Coral",
+                "color_code": "#FF7F50",
+                "storage": "64GB",
+                "price": 4900000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-xr-coral.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone XR nổi tiếng với thời lượng pin bền bỉ và bộ sưu tập màu sắc cá tính.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "iPhone XR - Giá rẻ, trải nghiệm tốt",
+            "meta_description": "iPhone XR cũ đủ màu, cam kết máy zin."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 1100
+        }
+    },
+    {
+        "name": "Dell Latitude E3301",
+        "slug": "dell-latitude-e3301",
+        "brand": "Dell",
+        "category": "Tablet",
+        "base_price": 15990000,
+        "sale_price": 13490000,
+        "thumbnail": "/uploads/dell-latitude-e3301.jpg",
+        "dimensions": {
+            "height": 14.9,
+            "width": 307.6,
+            "thickness": 204.5
+        },
+        "design_features": [
+            "Thiết kế kim loại siêu mỏng",
+            "Trọng lượng nhẹ 1.18kg",
+            "Bản lề thông minh nâng bàn phím"
+        ],
+        "material": "Hợp kim nhôm + magie",
+        "specifications": {
+            "performance": {
+                "cpu": "Intel Core i5-8265U",
+                "gpu": "Intel UHD Graphics 620",
+                "ram": "8GB LPDDR3",
+                "rom_options": [
+                    "256GB",
+                    "512GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "WVA Anti-glare",
+                "screen_resolution": "1920 x 1080 (FHD)",
+                "screen_size": "13.3 inch",
+                "rear_camera": "Không có",
+                "front_camera": "HD Web Camera"
+            },
+            "battery_charging": {
+                "battery_capacity": "4-Cell 45Whr",
+                "charging_tech": "ExpressCharge 65W",
+                "port_type": "USB-C, HDMI, USB 3.1"
+            },
+            "connectivity": {
+                "sim": "Không hỗ trợ",
+                "network": "Wi-Fi 5, Bluetooth 5.0",
+                "wifi_bluetooth": "Intel Dual Band Wireless, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Bảo mật vân tay trên nút nguồn",
+                "special_features": [
+                    "Bàn phím đèn nền",
+                    "Độ bền chuẩn quân đội MIL-STD-810G"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "DEL-LAT-E3301-256G",
+                "color_name": "Platinum Silver",
+                "color_code": "#E5E5E5",
+                "storage": "256GB SSD",
+                "price": 13490000,
+                "stock": 10,
+                "images": [
+                    "/uploads/dell-latitude-e3301.jpg",
+                    "/uploads/dell-latitude-e3301-2.jpg",
+                    "/uploads/dell-latitude-e3301-3.jpg"
+                ]
+            }
+        ],
+        "description": "Laptop Dell Latitude E3301 là chiếc máy tính xách tay phân khúc doanh nghiệp siêu mỏng nhẹ, độ bền cao, hiệu năng ổn định phù hợp cho học sinh, sinh viên và nhân viên văn phòng.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Dell Latitude E3301 - Laptop văn phòng mỏng nhẹ",
+            "meta_description": "Dell Latitude E3301 chính hãng giá tốt, thiết kế vỏ kim loại cao cấp, Core i5 mạnh mẽ."
+        },
+        "ratings": {
+            "average_score": 4.6,
+            "review_count": 32
+        }
+    },
+    {
+        "name": "Apple iPhone XS",
+        "slug": "apple-iphone-xs",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 11990000,
+        "sale_price": 6490000,
+        "thumbnail": "/uploads/iphone-xs.jpg",
+        "dimensions": {
+            "height": 143.6,
+            "width": 70.9,
+            "thickness": 7.7
+        },
+        "design_features": [
+            "Khung thép không gỉ bóng bẩy",
+            "Mặt kính cường lực cao cấp",
+            "Chống nước IP68"
+        ],
+        "material": "Thép không gỉ, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A12 Bionic",
+                "gpu": "Apple GPU 4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "64GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina OLED",
+                "screen_resolution": "2436 x 1125",
+                "screen_size": "5.8 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "7MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "2658mAh",
+                "charging_tech": "Sạc nhanh 15W, sạc không dây Qi",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "4G LTE",
+                "wifi_bluetooth": "Wi-Fi 5, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Smart HDR",
+                    "3D Touch"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IPXS-64GD",
+                "color_name": "Gold",
+                "color_code": "#D4AF37",
+                "storage": "64GB",
+                "price": 6490000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-xs.jpg",
+                    "/uploads/iphone-xs-2.jpg",
+                    "/uploads/iphone-xs-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone XS mang lại màn hình OLED sắc nét, thiết kế khung thép cầm nắm đầm tay và hệ thống camera kép chụp chân dung đỉnh cao.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "Apple iPhone XS - Cửa hàng Minh Khang",
+            "meta_description": "Mua iPhone XS cũ giá rẻ, nguyên bản, bảo hành dài hạn."
+        },
+        "ratings": {
+            "average_score": 4.5,
+            "review_count": 145
+        }
+    },
+    {
+        "name": "Apple iPhone 12",
+        "slug": "apple-iphone-12",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 15990000,
+        "sale_price": 11490000,
+        "thumbnail": "/uploads/iphone-12.jpg",
+        "dimensions": {
+            "height": 146.7,
+            "width": 71.5,
+            "thickness": 7.4
+        },
+        "design_features": [
+            "Cạnh phẳng vuông vức",
+            "Mặt trước Ceramic Shield siêu bền",
+            "Mặt lưng kính bóng bẩy"
+        ],
+        "material": "Nhôm hàng không, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A14 Bionic",
+                "gpu": "Apple GPU 4-core",
+                "ram": "4GB",
+                "rom_options": [
+                    "64GB",
+                    "128GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2532 x 1170",
+                "screen_size": "6.1 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "2815mAh",
+                "charging_tech": "Sạc nhanh 20W, MagSafe 15W",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.0"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Chế độ ban đêm trên mọi camera",
+                    "Quay video HDR Dolby Vision"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP12-64BK",
+                "color_name": "Black",
+                "color_code": "#121212",
+                "storage": "64GB",
+                "price": 11490000,
+                "stock": 20,
+                "images": [
+                    "/uploads/iphone-12.jpg",
+                    "/uploads/iphone-12-2.jpg",
+                    "/uploads/iphone-12-3.jpg",
+                    "/uploads/iphone-12-4.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 12 đánh dấu sự trở lại của thiết kế viền vuông sang trọng, hỗ trợ kết nối 5G siêu tốc và chip A14 Bionic mạnh mẽ.",
+        "is_active": true,
+        "is_featured": false,
+        "seo": {
+            "meta_title": "Apple iPhone 12 - Giá tốt nhất hôm nay",
+            "meta_description": "Sở hữu ngay iPhone 12 chính hãng, thiết kế viền vuông thời thượng, màn hình OLED rực rỡ."
+        },
+        "ratings": {
+            "average_score": 4.7,
+            "review_count": 320
+        }
+    },
+    {
+        "name": "Apple iPhone 14 Plus",
+        "slug": "apple-iphone-14-plus",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 21990000,
+        "sale_price": 18490000,
+        "thumbnail": "/uploads/iphone-14plus.jpg",
+        "dimensions": {
+            "height": 160.8,
+            "width": 78.1,
+            "thickness": 7.8
+        },
+        "design_features": [
+            "Màn hình lớn 6.7 inch",
+            "Thời lượng pin dài nhất dòng iPhone",
+            "Khung nhôm trọng lượng tối ưu"
+        ],
+        "material": "Nhôm, kính",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A15 Bionic (5-core GPU)",
+                "gpu": "Apple GPU 5-core",
+                "ram": "6GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2778 x 1284",
+                "screen_size": "6.7 inch",
+                "rear_camera": "12MP + 12MP",
+                "front_camera": "12MP (Tự động lấy nét)"
+            },
+            "battery_charging": {
+                "battery_capacity": "4325mAh",
+                "charging_tech": "Sạc nhanh 20W, MagSafe 15W",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Action Mode quay video siêu mượt",
+                    "Phát hiện va chạm thông minh"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP14PL-128BL",
+                "color_name": "Blue",
+                "color_code": "#A2B5CD",
+                "storage": "128GB",
+                "price": 18490000,
+                "stock": 12,
+                "images": [
+                    "/uploads/iphone-14plus.jpg",
+                    "/uploads/iphone-14plus-2.jpg",
+                    "/uploads/iphone-14plus-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 14 Plus mang lại trải nghiệm màn hình siêu lớn và thời lượng pin cực khủng trong một thiết kế mỏng nhẹ, dễ dàng sử dụng cả ngày.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 14 Plus - Màn hình lớn, pin trâu",
+            "meta_description": "Mua iPhone 14 Plus chính hãng VN/A tại Minh Khang Store với giá tốt nhất thị trường."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 86
+        }
+    },
+    {
+        "name": "Apple iPhone 14 Pro",
+        "slug": "apple-iphone-14-pro",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 25990000,
+        "sale_price": 21990000,
+        "thumbnail": "/uploads/iphone-14pro.jpg",
+        "dimensions": {
+            "height": 147.5,
+            "width": 71.5,
+            "thickness": 7.85
+        },
+        "design_features": [
+            "Dynamic Island thông minh",
+            "Màn hình Always-on Display",
+            "Khung thép không gỉ nhám"
+        ],
+        "material": "Thép không gỉ, kính mờ",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A16 Bionic",
+                "gpu": "Apple GPU 5-core",
+                "ram": "6GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "LTPO Super Retina XDR",
+                "screen_resolution": "2556 x 1179",
+                "screen_size": "6.1 inch",
+                "rear_camera": "48MP + 12MP + 12MP (Zoom 3x)",
+                "front_camera": "12MP (Có OIS)"
+            },
+            "battery_charging": {
+                "battery_capacity": "3200mAh",
+                "charging_tech": "Sạc nhanh 20W, MagSafe 15W",
+                "port_type": "Lightning"
+            },
+            "connectivity": {
+                "sim": "1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Camera 48MP ProRAW",
+                    "Dynamic Island tương tác"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP14P-128BK",
+                "color_name": "Space Black",
+                "color_code": "#232323",
+                "storage": "128GB",
+                "price": 21990000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-14pro.jpg",
+                    "/uploads/iphone-14pro-2.jpg",
+                    "/uploads/iphone-14pro-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 14 Pro sở hữu Dynamic Island đột phá cùng cảm biến camera 48MP nâng tầm chụp ảnh chuyên nghiệp và chip xử lý A16 Bionic mạnh mẽ.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 14 Pro - Dynamic Island đỉnh cao",
+            "meta_description": "Mua iPhone 14 Pro chính hãng VN/A giá tốt, hỗ trợ trả góp 0% tại Minh Khang Store."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 112
+        }
+    },
+    {
+        "name": "Apple iPhone 15 Pro",
+        "slug": "apple-iphone-15-pro",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 28990000,
+        "sale_price": 24990000,
+        "thumbnail": "/uploads/iphone-15-pro-256gb.jpg",
+        "dimensions": {
+            "height": 146.6,
+            "width": 70.6,
+            "thickness": 8.25
+        },
+        "design_features": [
+            "Khung Titanium siêu nhẹ",
+            "Nút Action Button đa năng",
+            "Cổng sạc USB-C siêu tốc"
+        ],
+        "material": "Titanium cấp vũ trụ, kính mờ",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A17 Pro",
+                "gpu": "Apple GPU 6-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "LTPO Super Retina XDR",
+                "screen_resolution": "2556 x 1179",
+                "screen_size": "6.1 inch",
+                "rear_camera": "48MP + 12MP + 12MP (Zoom 3x)",
+                "front_camera": "12MP"
+            },
+            "battery_charging": {
+                "battery_capacity": "3274mAh",
+                "charging_tech": "Sạc USB-C 25W, MagSafe 15W",
+                "port_type": "USB-C (Chuẩn USB 3 tốc độ 10Gbps)"
+            },
+            "connectivity": {
+                "sim": "2 eSIM hoặc 1 Nano + 1 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 6E, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Nút Action Button tùy chỉnh",
+                    "Ray tracing phần cứng chơi game console"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP15P-256NT",
+                "color_name": "Natural Titanium",
+                "color_code": "#A8A9AD",
+                "storage": "256GB",
+                "price": 24990000,
+                "stock": 15,
+                "images": [
+                    "/uploads/iphone-15-pro-256gb.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 15 Pro là dòng sản phẩm đầu tiên dùng khung vỏ Titan siêu bền nhẹ, trang bị chip 3nm A17 Pro mang lại hiệu năng đồ họa đột phá.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 15 Pro - Titanium siêu nhẹ",
+            "meta_description": "iPhone 15 Pro chính hãng màu Titan tự nhiên, dung lượng 256GB, giá tốt nhất."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 98
+        }
+    },
+    {
+        "name": "Apple iPhone 16 Pro Max",
+        "slug": "apple-iphone-16-pro-max",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 34990000,
+        "sale_price": 31990000,
+        "thumbnail": "/uploads/iphone-16-pro-max-256gb.jpg",
+        "dimensions": {
+            "height": 163,
+            "width": 77.6,
+            "thickness": 8.25
+        },
+        "design_features": [
+            "Màn hình cực lớn 6.9 inch viền siêu mỏng",
+            "Nút Camera Control cảm ứng lực",
+            "Khung Titanium cấp 5 hoàn thiện mới"
+        ],
+        "material": "Titanium đánh bóng nhẹ, kính Ceramic Shield thế hệ mới nhất",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A18 Pro",
+                "gpu": "Apple GPU 6-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "256GB",
+                    "512GB",
+                    "1TB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED ProMotion 120Hz",
+                "screen_resolution": "2868 x 1320",
+                "screen_size": "6.9 inch",
+                "rear_camera": "48MP Fusion + 48MP UltraWide + 12MP Telephoto (Zoom 5x)",
+                "front_camera": "12MP TrueDepth"
+            },
+            "battery_charging": {
+                "battery_capacity": "4685mAh",
+                "charging_tech": "Sạc USB-C 30W, MagSafe 25W",
+                "port_type": "USB-C (Chuẩn USB 3)"
+            },
+            "connectivity": {
+                "sim": "2 eSIM",
+                "network": "5G (Băng tần siêu rộng)",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.4"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Apple Intelligence (AI tích hợp)",
+                    "Nút điều khiển camera chuyên biệt",
+                    "Quay phim 4K 120fps Dolby Vision"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP16PM-256DT",
+                "color_name": "Desert Titanium",
+                "color_code": "#C7B49F",
+                "storage": "256GB",
+                "price": 31990000,
+                "stock": 30,
+                "images": [
+                    "/uploads/iphone-16-pro-max-256gb.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 16 Pro Max sở hữu màn hình 6.9 inch cực đại, trang bị chip A18 Pro mạnh mẽ và bộ điều khiển camera thông minh mang lại trải nghiệm sáng tạo đỉnh cao.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 16 Pro Max - Siêu phẩm đỉnh cao 2026",
+            "meta_description": "Đặt hàng iPhone 16 Pro Max chính hãng tại Minh Khang Store, nhận ưu đãi độc quyền."
+        },
+        "ratings": {
+            "average_score": 4.9,
+            "review_count": 24
+        }
+    },
+    {
+        "name": "Apple iPhone 16 Pro",
+        "slug": "apple-iphone-16-pro",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 28990000,
+        "sale_price": 26990000,
+        "thumbnail": "/uploads/iphone-16-pro-128gb-256gb.jpg",
+        "dimensions": {
+            "height": 149.6,
+            "width": 71.5,
+            "thickness": 8.25
+        },
+        "design_features": [
+            "Màn hình 6.3 inch viền siêu mỏng",
+            "Nút điều khiển Camera Control",
+            "Khung Titanium hoàn thiện cao cấp"
+        ],
+        "material": "Titanium, kính Ceramic Shield thế hệ mới",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A18 Pro",
+                "gpu": "Apple GPU 6-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED ProMotion 120Hz",
+                "screen_resolution": "2622 x 1206",
+                "screen_size": "6.3 inch",
+                "rear_camera": "48MP Fusion + 48MP UltraWide + 12MP Telephoto (Zoom 5x)",
+                "front_camera": "12MP TrueDepth"
+            },
+            "battery_charging": {
+                "battery_capacity": "3582mAh",
+                "charging_tech": "Sạc nhanh USB-C 30W, MagSafe 25W",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.4"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Hệ thống Apple Intelligence",
+                    "Bộ điều khiển camera thế hệ mới",
+                    "Zoom quang học 5x chuyên nghiệp"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP16P-128DT",
+                "color_name": "Desert Titanium",
+                "color_code": "#C7B49F",
+                "storage": "128GB",
+                "price": 26990000,
+                "stock": 20,
+                "images": [
+                    "/uploads/iphone-16-pro-128gb-256gb.jpg",
+                    "/uploads/iphone-16-pro-128gb-256gb-2.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 16 Pro mang camera siêu Zoom 5x cao cấp lên kích thước 6.3 inch nhỏ gọn cùng với chip A18 Pro hỗ trợ đầy đủ các tính năng AI thông minh.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 16 Pro - Đỉnh cao công nghệ 6.3 inch",
+            "meta_description": "Mua ngay iPhone 16 Pro chính hãng giá cực tốt tại Minh Khang Store."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 36
+        }
+    },
+    {
+        "name": "Apple iPhone 16",
+        "slug": "apple-iphone-16",
+        "brand": "Apple",
+        "category": "Smartphone",
+        "base_price": 22990000,
+        "sale_price": 20990000,
+        "thumbnail": "/uploads/iphone-16-128gb.jpg",
+        "dimensions": {
+            "height": 147.6,
+            "width": 71.6,
+            "thickness": 7.8
+        },
+        "design_features": [
+            "Camera xếp dọc độc đáo",
+            "Hỗ trợ quay Video không gian (Spatial)",
+            "Nút bấm Camera Control cảm ứng"
+        ],
+        "material": "Nhôm tái chế, kính cường lực pha màu độc đáo",
+        "specifications": {
+            "performance": {
+                "cpu": "Apple A18 Bionic",
+                "gpu": "Apple GPU 5-core",
+                "ram": "8GB",
+                "rom_options": [
+                    "128GB",
+                    "256GB"
+                ]
+            },
+            "display_camera": {
+                "screen_tech": "Super Retina XDR OLED",
+                "screen_resolution": "2556 x 1179",
+                "screen_size": "6.1 inch",
+                "rear_camera": "48MP Fusion + 12MP UltraWide (Chụp cận cảnh macro)",
+                "front_camera": "12MP TrueDepth"
+            },
+            "battery_charging": {
+                "battery_capacity": "3561mAh",
+                "charging_tech": "Sạc nhanh USB-C 25W, MagSafe 25W",
+                "port_type": "USB-C"
+            },
+            "connectivity": {
+                "sim": "2 eSIM",
+                "network": "5G",
+                "wifi_bluetooth": "Wi-Fi 7, Bluetooth 5.3"
+            },
+            "utilities": {
+                "security": "Face ID",
+                "special_features": [
+                    "Apple Intelligence",
+                    "Nút Camera Control tiện lợi",
+                    "Chụp ảnh siêu cận Macro"
+                ]
+            }
+        },
+        "variants": [
+            {
+                "sku": "APL-IP16-128BK",
+                "color_name": "Black",
+                "color_code": "#121212",
+                "storage": "128GB",
+                "price": 20990000,
+                "stock": 25,
+                "images": [
+                    "/uploads/iphone-16-128gb.jpg",
+                    "/uploads/iphone-16-128gb-2.jpg",
+                    "/uploads/iphone-16-128gb-3.jpg"
+                ]
+            }
+        ],
+        "description": "iPhone 16 tiêu chuẩn được trang bị bộ nhớ RAM 8GB giúp vận hành trơn tru Apple Intelligence, thiết kế camera đặt dọc hỗ trợ chụp quay Spatial và nút điều khiển camera độc quyền.",
+        "is_active": true,
+        "is_featured": true,
+        "seo": {
+            "meta_title": "Apple iPhone 16 - Hỗ trợ AI tối tân",
+            "meta_description": "iPhone 16 chính hãng VN/A giá tốt, đủ màu sắc thời thượng tại Minh Khang Store."
+        },
+        "ratings": {
+            "average_score": 4.8,
+            "review_count": 52
+        }
+    }
+]

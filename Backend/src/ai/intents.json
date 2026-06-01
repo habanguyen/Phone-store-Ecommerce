@@ -1,0 +1,39 @@
+{
+  "intents": [
+    {
+      "name": "greeting",
+      "examples": ["xin chào", "hello", "chào", "hi", "hey"],
+      "type": "faq"
+    },
+    {
+      "name": "faq_warranty",
+      "examples": ["bảo hành", "warranty", "chính sách bảo hành", "bảo hành bao lâu"],
+      "type": "faq"
+    },
+    {
+      "name": "faq_return",
+      "examples": ["đổi trả", "refund", "trả hàng", "đổi hàng"],
+      "type": "faq"
+    },
+    {
+      "name": "product_recommendation",
+      "examples": ["gợi ý", "tư vấn", "gợi ý sản phẩm", "tìm sản phẩm", "recommend"],
+      "type": "recommend"
+    },
+    {
+      "name": "product_info",
+      "examples": ["thông tin", "chi tiết", "info", "specs", "chi tiết sản phẩm"],
+      "type": "product_info"
+    },
+    {
+      "name": "compare",
+      "examples": ["so sánh", "compare", "vs", "với"],
+      "type": "compare"
+    },
+    {
+      "name": "order_tracking",
+      "examples": ["mã đơn", "mã đơn hàng", "tra cứu đơn", "theo dõi đơn"],
+      "type": "order"
+    }
+  ]
+}
