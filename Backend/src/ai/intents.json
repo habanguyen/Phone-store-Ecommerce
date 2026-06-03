@@ -1,39 +1,147 @@
 {
-  "intents": [
-    {
-      "name": "greeting",
-      "examples": ["xin chào", "hello", "chào", "hi", "hey"],
-      "type": "faq"
-    },
-    {
-      "name": "faq_warranty",
-      "examples": ["bảo hành", "warranty", "chính sách bảo hành", "bảo hành bao lâu"],
-      "type": "faq"
-    },
-    {
-      "name": "faq_return",
-      "examples": ["đổi trả", "refund", "trả hàng", "đổi hàng"],
-      "type": "faq"
-    },
-    {
-      "name": "product_recommendation",
-      "examples": ["gợi ý", "tư vấn", "gợi ý sản phẩm", "tìm sản phẩm", "recommend"],
-      "type": "recommend"
-    },
-    {
-      "name": "product_info",
-      "examples": ["thông tin", "chi tiết", "info", "specs", "chi tiết sản phẩm"],
-      "type": "product_info"
-    },
-    {
-      "name": "compare",
-      "examples": ["so sánh", "compare", "vs", "với"],
-      "type": "compare"
-    },
-    {
-      "name": "order_tracking",
-      "examples": ["mã đơn", "mã đơn hàng", "tra cứu đơn", "theo dõi đơn"],
-      "type": "order"
-    }
-  ]
+  "intentHierarchy": {
+    "system": [
+      {
+        "name": "greeting",
+        "examples": ["xin chào", "hello", "chào bạn", "hi", "hey"],
+        "description": "Chào hỏi và khởi tạo cuộc trò chuyện"
+      },
+      {
+        "name": "thanks",
+        "examples": ["cảm ơn", "thanks", "thank you", "ok cảm ơn", "rất cảm ơn"],
+        "description": "Cảm ơn trợ lý"
+      },
+      {
+        "name": "goodbye",
+        "examples": ["tạm biệt", "bye", "hẹn gặp lại", "chào tạm biệt"],
+        "description": "Kết thúc cuộc trò chuyện"
+      },
+      {
+        "name": "human_support",
+        "examples": ["nói chuyện với nhân viên", "tư vấn viên", "hỗ trợ trực tiếp", "gặp nhân viên", "chuyển sang nhân viên"],
+        "description": "Chuyển sang hỗ trợ con người"
+      },
+      {
+        "name": "fallback",
+        "examples": [],
+        "description": "Mẫu fallback khi không xác định được intent"
+      }
+    ],
+    "faq": [
+      {
+        "name": "shipping",
+        "examples": ["giao hàng", "shipping", "vận chuyển", "bao lâu giao", "miễn phí ship"],
+        "description": "Các câu hỏi về giao nhận và vận chuyển"
+      },
+      {
+        "name": "payment",
+        "examples": ["thanh toán", "payment", "trả góp", "trả tiền", "thanh toán khi nhận"],
+        "description": "Các câu hỏi về phương thức thanh toán"
+      },
+      {
+        "name": "warranty",
+        "examples": ["bảo hành", "warranty", "chính sách bảo hành", "bảo hành bao lâu"],
+        "description": "Các câu hỏi bảo hành sản phẩm"
+      },
+      {
+        "name": "refund",
+        "examples": ["đổi trả", "refund", "trả hàng", "hủy đơn", "hoàn tiền"],
+        "description": "Các câu hỏi về đổi trả và hoàn tiền"
+      },
+      {
+        "name": "coupon",
+        "examples": ["mã giảm giá", "coupon", "khuyến mãi", "ưu đãi", "voucher"],
+        "description": "Các câu hỏi về mã giảm giá và khuyến mãi"
+      }
+    ],
+    "sales": [
+      {
+        "name": "recommend_gaming",
+        "examples": ["game", "gaming", "chơi game", "fps", "mượt", "Tư vấn điện thoại chơi game", "Máy nào chơi game tốt", "Chơi Liên Quân nên mua máy nào", "máy chơi game không nóng", "Snapdragon mạnh để chơi game"],
+        "description": "Gợi ý điện thoại phù hợp cho chơi game"
+      },
+      {
+        "name": "recommend_camera",
+        "examples": ["camera", "chụp hình", "zoom", "ảnh đẹp", "selfie", "quay video tốt", "Camera đẹp dưới 20 triệu", "Máy chụp đêm tốt", "quay TikTok đẹp", "camera trước tốt để selfie", "chụp chân dung đẹp", "quay 4K tốt"],
+        "description": "Gợi ý điện thoại có camera tốt"
+      },
+      {
+        "name": "recommend_battery",
+        "examples": ["pin", "pin lâu", "dung lượng pin", "sạc", "pin trâu", "Máy pin trâu nhất hiện nay", "Dùng được 2 ngày", "Pin khỏe dưới 10 triệu", "Máy ít phải sạc", "Sạc nhanh và pin tốt", "Máy đi công tác lâu ngày"],
+        "description": "Gợi ý điện thoại có pin tốt"
+      },
+      {
+        "name": "recommend_student",
+        "examples": ["sinh viên", "học sinh", "giá rẻ", "tiết kiệm", "dùng học", "student", "Máy học online tốt", "Dưới 7 triệu mua máy gì", "Điện thoại cho người mới đi làm", "Máy học tập và giải trí", "Tư vấn điện thoại dưới 5 triệu", "Máy giá rẻ nhưng bền", "Sinh viên CNTT nên mua máy nào"],
+        "description": "Gợi ý điện thoại phù hợp cho sinh viên"
+      },
+      {
+        "name": "recommend_flagship",
+        "examples": ["flagship", "cao cấp", "đỉnh", "mạnh nhất", "siêu phẩm", "điện thoại cao cấp", "Android cao cấp", "iPhone cao cấp"],
+        "description": "Gợi ý điện thoại flagship cao cấp"
+      },
+      {
+        "name": "recommend_office",
+        "examples": ["văn phòng", "công việc", "office", "email", "ứng dụng văn phòng", "phù hợp cho dân văn phòng", "học tập và làm việc", "làm việc đa nhiệm tốt"],
+        "description": "Gợi ý điện thoại phù hợp cho công việc văn phòng"
+      },
+      {
+        "name": "recommend_creator",
+        "examples": ["creator", "sáng tạo", "edit video", "content", "tiktok", "quay vlog", "livestream", "livestream tốt", "video TikTok đẹp", "dân content"],
+        "description": "Gợi ý điện thoại phù hợp cho người sáng tạo nội dung"
+      },
+      {
+        "name": "recommend_general",
+        "examples": ["điện thoại", "tư vấn điện thoại", "nên mua điện thoại", "điện thoại tốt nhất", "điện thoại đáng mua", "dưới 10 triệu", "tầm 15 triệu", "giá dưới 10 triệu", "dưới 7 triệu", "máy nào đáng mua"],
+        "description": "Gợi ý điện thoại chung cho mọi nhu cầu mua sắm"
+      },
+      {
+        "name": "recommend_ios",
+        "examples": ["ios", "iPhone", "Apple", "iOS", "Apple nào", "có iPhone"],
+        "description": "Gợi ý điện thoại chạy iOS"
+      },
+      {
+        "name": "recommend_android",
+        "examples": ["android", "Samsung", "Xiaomi", "Oppo", "Vivo", "Android đáng mua", "điện thoại Android"],
+        "description": "Gợi ý điện thoại chạy Android"
+      },
+      {
+        "name": "recommend_compact",
+        "examples": ["nhỏ gọn", "compact", "dễ cầm", "gọn nhẹ", "mini", "điện thoại nhỏ gọn"],
+        "description": "Gợi ý điện thoại nhỏ gọn và dễ cầm"
+      }
+    ],
+    "business": [
+      {
+        "name": "product_info",
+        "examples": ["thông tin", "chi tiết", "spec", "cấu hình", "info sản phẩm"],
+        "description": "Hỏi về thông tin cụ thể của sản phẩm"
+      },
+      {
+        "name": "compare_products",
+        "examples": ["so sánh", "compare", "vs", "với", "nên mua"],
+        "description": "So sánh hai sản phẩm"
+      },
+      {
+        "name": "stock_check",
+        "examples": ["còn hàng", "tồn kho", "hết hàng", "còn hàng không"],
+        "description": "Kiểm tra tồn kho sản phẩm"
+      },
+      {
+        "name": "order_tracking",
+        "examples": ["mã đơn", "theo dõi đơn", "tra cứu đơn", "đơn hàng"],
+        "description": "Hỏi về tra cứu trạng thái đơn hàng"
+      },
+      {
+        "name": "cancel_order",
+        "examples": ["hủy đơn", "cancel order", "hủy mua", "hủy giao"],
+        "description": "Hỏi về hủy đơn hàng"
+      },
+      {
+        "name": "account_support",
+        "examples": ["tài khoản", "đăng nhập", "quên mật khẩu", "không đăng nhập được", "mở khóa tài khoản"],
+        "description": "Hỗ trợ vấn đề tài khoản người dùng"
+      }
+    ]
+  }
 }

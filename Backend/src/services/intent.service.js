@@ -7,7 +7,11 @@ const loadIntents = () => {
   try {
     const file = fs.readFileSync(path.join(__dirname, '..', 'ai', 'intents.json'), 'utf-8');
     const parsed = JSON.parse(file);
-    intents = parsed.intents || [];
+    const hierarchy = parsed.intentHierarchy || {};
+    intents = Object.entries(hierarchy).reduce((all, [group, entries]) => {
+      const mapped = (entries || []).map((intent) => ({ ...intent, group }));
+      return all.concat(mapped);
+    }, []);
     return intents;
   } catch (err) {
     console.error('Failed to load intents:', err);
@@ -16,35 +20,64 @@ const loadIntents = () => {
   }
 };
 
-// Simple keyword-based intent detector
-const detectIntent = (text) => {
-  if (!text || !text.trim()) return { name: 'unknown', score: 0 };
-  const lower = text.toLowerCase();
-  if (!intents.length) loadIntents();
+const normalizeText = (text) => (text || '').toLowerCase();
 
-  let best = { name: 'unknown', score: 0, type: null };
+const calculateIntentScore = (intent, lowerText) => {
+  const candidates = (intent.examples || []).map((example) => example.toLowerCase());
+  if (!candidates.length) return 0;
 
-  for (const intent of intents) {
-    let matches = 0;
-    for (const ex of intent.examples || []) {
-      const key = ex.toLowerCase();
-      if (lower.includes(key)) matches++;
+  let score = 0;
+  for (const phrase of candidates) {
+    if (!phrase) continue;
+    if (lowerText.includes(phrase)) {
+      score += 1;
+      continue;
     }
-    const score = matches / Math.max(1, (intent.examples || []).length);
-    if (score > best.score) {
-      best = { name: intent.name, score, type: intent.type };
+    const words = phrase.split(/\s+/).filter(Boolean);
+    for (const word of words) {
+      if (word.length > 2 && lowerText.includes(word)) {
+        score += 0.2;
+      }
     }
   }
 
-  // small heuristic: if message length small and contains hello words
-  if (best.score === 0) {
-    const short = lower.split(/\s+/).length <= 3;
-    if (/^(hi|hello|xin chào|chào|hey)/i.test(lower) && short) {
-      best = { name: 'greeting', score: 0.8, type: 'faq' };
+  return Math.min(1, score / candidates.length);
+};
+
+const detectIntent = (text) => {
+  if (!text || !text.trim()) return { name: 'fallback', score: 0, group: 'system' };
+  const lower = normalizeText(text);
+  if (!intents.length) loadIntents();
+
+  let best = { name: 'fallback', score: 0, group: 'system' };
+
+  for (const intent of intents) {
+    const score = calculateIntentScore(intent, lower);
+    if (score > best.score) {
+      best = { name: intent.name, score, group: intent.group };
     }
+  }
+
+  if (best.score === 0) {
+    if (/\b(hi|hello|xin chào|chào|hey)\b/.test(lower)) {
+      return { name: 'greeting', score: 0.9, group: 'system' };
+    }
+    if (/\b(cảm ơn|thanks|thank you)\b/.test(lower)) {
+      return { name: 'thanks', score: 0.9, group: 'system' };
+    }
+  }
+
+  const productQueryPattern = /\b(điện thoại|smartphone|iphone|samsung|xiaomi|oppo|vivo|realme|camera|pin|game|gaming|battery|student|quay|livestream|vlog|selfie|4k|du lịch|học online|sinh viên|văn phòng|giá|triệu)\b/i;
+  if (best.score <= 0 && productQueryPattern.test(text)) {
+    return { name: 'recommend_general', score: 0.35, group: 'sales' };
   }
 
   return best;
 };
 
-module.exports = { loadIntents, detectIntent };
+const getIntentByName = (name) => {
+  if (!intents.length) loadIntents();
+  return intents.find((intent) => intent.name === name) || null;
+};
+
+module.exports = { loadIntents, detectIntent, getIntentByName };

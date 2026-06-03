@@ -3,13 +3,13 @@ import api from '../api.js';
 import './Chatbox.css';
 
 const suggestions = [
-    'Tư vấn sản phẩm',
-    'So sánh điện thoại',
-    'Gợi ý theo nhu cầu',
+    'Tư vấn điện thoại phù hợp',
+    'Tư vấn gaming',
+    'Tư vấn camera',
+    'Gợi ý pin lâu',
+    'Gợi ý iOS / Android',
     'Giải đáp chính sách',
-    'Hướng dẫn mua hàng',
-    'Hỗ trợ thanh toán',
-    'Hỗ trợ tra cứu đơn hàng'
+    'Tra cứu đơn hàng'
 ];
 
 const Chatbox = () => {
@@ -18,17 +18,44 @@ const Chatbox = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [showSessionConfirm, setShowSessionConfirm] = useState(false);
+    const [sessionTimer, setSessionTimer] = useState(null);
     const messageEndRef = useRef(null);
 
     useEffect(() => {
         if (isOpen) {
             fetchChatHistory();
+            // Check if we need to show session confirmation
+            const token = localStorage.getItem('token');
+            if (token && messages.length > 0) {
+                setShowSessionConfirm(true);
+            }
         }
     }, [isOpen]);
 
     useEffect(() => {
         messageEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
+
+    // 5-minute session auto-reset timer
+    useEffect(() => {
+        if (isOpen && sessionTimer) {
+            clearTimeout(sessionTimer);
+        }
+
+        if (isOpen) {
+            const timer = setTimeout(() => {
+                if (isOpen) {
+                    setShowSessionConfirm(true);
+                }
+            }, 5 * 60 * 1000); // 5 minutes
+            setSessionTimer(timer);
+        }
+
+        return () => {
+            if (sessionTimer) clearTimeout(sessionTimer);
+        };
+    }, [isOpen, messages.length]);
 
     const getToken = () => localStorage.getItem('token');
 
@@ -78,6 +105,50 @@ const Chatbox = () => {
             ]);
         } finally {
             setLoading(false);
+        }
+    };
+
+    const confirmSession = async () => {
+        const token = getToken();
+        if (token) {
+            try {
+                await api.post('/ai/session/confirm');
+                setShowSessionConfirm(false);
+            } catch (err) {
+                console.error('Error confirming session:', err);
+            }
+        } else {
+            setShowSessionConfirm(false);
+        }
+    };
+
+    const resetSession = async () => {
+        const token = getToken();
+        if (token) {
+            try {
+                await api.post('/ai/session/reset');
+                setMessages([]);
+                setInput('');
+                setShowSessionConfirm(false);
+                await fetchChatHistory();
+            } catch (err) {
+                console.error('Error resetting session:', err);
+            }
+        }
+    };
+
+    const endSession = async () => {
+        const token = getToken();
+        if (token) {
+            try {
+                await api.post('/ai/session/end');
+                setIsOpen(false);
+                setMessages([]);
+                setInput('');
+                setShowSessionConfirm(false);
+            } catch (err) {
+                console.error('Error ending session:', err);
+            }
         }
     };
 
@@ -132,6 +203,21 @@ const Chatbox = () => {
         sendMessage(suggestion);
     };
 
+    const isSlotFillingMessage = (message) => {
+        return message && message.includes('_[Slot:');
+    };
+
+    const extractSlotMessage = (message) => {
+        const slotMatch = message.match(/_\[Slot: (.+?)\]/);
+        if (slotMatch) {
+            return {
+                text: message.replace(/_\[Slot: .+?\]/, '').trim(),
+                slot: slotMatch[1]
+            };
+        }
+        return { text: message, slot: null };
+    };
+
     return (
         <div>
             {!isOpen && (
@@ -143,21 +229,52 @@ const Chatbox = () => {
                 <div className="chat-window">
                     <div className="chat-header">
                         <span>Trợ lý mua sắm</span>
-                        <button onClick={() => setIsOpen(false)} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', fontSize: '16px' }}>✕</button>
+                        <div className="chat-header-buttons">
+                            {messages.length > 0 && (
+                                <>
+                                    <button onClick={resetSession} title="Reset phiên" className="header-btn">↻</button>
+                                    <button onClick={endSession} title="Kết thúc" className="header-btn">✕</button>
+                                </>
+                            )}
+                            {messages.length === 0 && (
+                                <button onClick={() => setIsOpen(false)} className="header-btn">✕</button>
+                            )}
+                        </div>
                     </div>
                     <div className="chat-body">
                         {loading && <div className="chat-loading">Đang xử lý...</div>}
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`chat-message ${msg.sender === 'user' ? 'user' : 'ai'}`}>
-                                <div className="bubble">
-                                    <strong>{msg.sender === 'user' ? 'Bạn' : 'AI'}:</strong>
-                                    <span>{msg.message}</span>
+                        {messages.map((msg, index) => {
+                            const slotInfo = isSlotFillingMessage(msg.message) 
+                                ? extractSlotMessage(msg.message)
+                                : { text: msg.message, slot: null };
+                            
+                            return (
+                                <div key={index} className={`chat-message ${msg.sender === 'user' ? 'user' : 'ai'} ${slotInfo.slot ? 'slot-filling' : ''}`}>
+                                    <div className="bubble">
+                                        <strong>{msg.sender === 'user' ? 'Bạn' : 'AI'}:</strong>
+                                        <span>{slotInfo.text}</span>
+                                        {slotInfo.slot && <div className="slot-label">📝 Đang hỏi về: {slotInfo.slot}</div>}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                         <div ref={messageEndRef} />
                         {error && <div style={{ color: 'red', marginTop: '6px' }}>{error}</div>}
                     </div>
+
+                    {showSessionConfirm && (
+                        <div className="session-confirmation">
+                            <div className="session-modal">
+                                <h3>Tiếp tục cuộc trò chuyện?</h3>
+                                <p>Phiên chat của bạn sẽ được tiếp tục. Bạn có muốn tiếp tục hay bắt đầu lại?</p>
+                                <div className="session-buttons">
+                                    <button className="btn-continue" onClick={confirmSession}>Tiếp tục</button>
+                                    <button className="btn-reset" onClick={resetSession}>Bắt đầu lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     <div className="chat-suggestions">
                         <div className="suggestion-title">Gợi ý nhanh</div>
                         <div className="suggestion-list">

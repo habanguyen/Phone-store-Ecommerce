@@ -31,6 +31,11 @@ router.get("/admin/chats", authMiddleware, adminOrStaffMiddleware, aiController.
 router.post("/admin/reply", authMiddleware, adminOrStaffMiddleware, aiController.replyToChat);
 router.get("/admin/insight", authMiddleware, adminOrStaffMiddleware, aiController.generateAdminInsight);
 
+// Session management routes
+router.post("/session/reset", authMiddleware, aiController.resetSession);
+router.post("/session/confirm", authMiddleware, aiController.confirmSession);
+router.post("/session/end", authMiddleware, aiController.endSession);
+
 // debug: list all routes registered on this router
 try {
 	const routes = router.stack
