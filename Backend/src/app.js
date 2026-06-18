@@ -4,6 +4,7 @@ const path = require("path");
 const connectDB = require("./config/db");
 const createAdminUser = require("./utils/createAdminUser");
 const { notFound, errorHandler } = require("./middlewares/error.middleware");
+const cors = require("cors");
 
 const app = express();
 
@@ -12,6 +13,7 @@ const startServer = async () => {
     await createAdminUser();
 
     // middleware
+    app.use(cors());
     app.use('/api/payments/webhook', express.raw({ type: 'application/json' }));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));

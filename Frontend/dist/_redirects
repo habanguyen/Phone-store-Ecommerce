@@ -1,0 +1,9 @@
+# Chuyển tiếp các cuộc gọi API từ Frontend sang Backend
+# Hãy thay thế "https://your-backend-domain.com" bằng URL Backend thực tế của bạn sau khi deploy (Ví dụ: https://phone-store.onrender.com)
+/api/*      https://your-backend-domain.com/api/:splat       200
+
+# Chuyển tiếp các request lấy ảnh tĩnh uploads từ Frontend sang Backend
+/uploads/*  https://your-backend-domain.com/uploads/:splat   200
+
+# Đảm bảo React Router hoạt động bình thường khi reload trang (Fix lỗi F5 bị 404 trên Netlify)
+/*          /index.html                                       200

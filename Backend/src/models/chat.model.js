@@ -17,6 +17,13 @@ const chatSchema = new mongoose.Schema({
         features: { type: [String], default: [] },
         usage: { type: String, default: null }
     },
+    memory: {
+        budget: { type: Object, default: null },
+        preferred_brand: { type: String, default: null },
+        usage: { type: String, default: null },
+        rejected_products: { type: [String], default: [] },
+        previous_intents: { type: [String], default: [] }
+    },
     currentIntent: { type: String, default: null },
     pendingSlot: { type: String, default: null },
     // Session management

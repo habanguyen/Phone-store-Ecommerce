@@ -58,6 +58,23 @@ Nói cho tôi biết bạn cần gì nhé.`;
 
 const extractWords = (text) => text.match(/\p{L}+/gu)?.filter((word) => word.length > 1) || [];
 
+const extractRejectedProducts = (message) => {
+    const text = (message || '').trim();
+    const patterns = [
+        /(?:không|ko|k)\s+(?:muốn|thích|lấy|mua|dùng|chọn|xài)\s+([^.,;!?]+)/i,
+        /(?:bỏ qua|loại bỏ|không chọn|không lấy)\s+([^.,;!?]+)/i
+    ];
+    const results = new Set();
+    for (const pattern of patterns) {
+        const match = text.match(pattern);
+        if (match && match[1]) {
+            const product = match[1].trim().replace(/[.,!?:;]$/, '');
+            if (product) results.add(product);
+        }
+    }
+    return Array.from(results);
+};
+
 const faqAnswerMap = {
     shipping: policyResponses.find((item) => item.keys.includes('giao hàng')).answer,
     payment: policyResponses.find((item) => item.keys.includes('payment')).answer,
@@ -105,8 +122,20 @@ const FEATURE_SEARCH_TERMS = {
     budget: ['giá rẻ', 'tiết kiệm', 'bình dân', 'giá thấp', 'điện thoại giá rẻ']
 };
 
-const buildProductQuery = (message, intentName) => {
-    const entities = entityService.extractEntitiesByIntent(message, intentName);
+const mergeEntitiesWithContext = (entities = {}, context = {}) => {
+    const merged = { ...entities };
+    if (!merged.brand && context.brand) merged.brand = context.brand;
+    if (!merged.budget && context.budget) merged.budget = context.budget;
+    if (!merged.color && context.color) merged.color = context.color;
+    if (!merged.storage && context.storage) merged.storage = context.storage;
+    if (!merged.features && context.features && context.features.length) merged.features = context.features;
+    if (!merged.usage && context.usage) merged.usage = context.usage;
+    return merged;
+};
+
+const buildProductQuery = (message, intentName, context = {}) => {
+    const extracted = entityService.extractEntitiesByIntent(message, intentName);
+    const entities = mergeEntitiesWithContext(extracted, context);
     const lower = (message || '').toLowerCase();
     const conditions = [
         { isDeleted: false },
@@ -168,12 +197,28 @@ const buildProductQuery = (message, intentName) => {
         conditions.push({ variants: { $elemMatch: variantMatch } });
     }
 
+    if (context.rejected_products && context.rejected_products.length > 0) {
+        const rejectedRegex = new RegExp(context.rejected_products.map((item) => escapeForRegex(item)).join('|'), 'i');
+        conditions.push({
+            $and: [
+                { name: { $not: rejectedRegex } },
+                { description: { $not: rejectedRegex } }
+            ]
+        });
+    }
+
     const textFilters = [];
     const intentTerms = salesRecommendationTerms[intentName] || [];
     const usageTerms = entities.usage && USAGE_SEARCH_TERMS[entities.usage] ? USAGE_SEARCH_TERMS[entities.usage] : [];
     const featureTerms = entities.features ? entities.features.flatMap((feature) => FEATURE_SEARCH_TERMS[feature] || [feature]) : [];
-    const messageTerms = extractWords(message).slice(0, 8);
-    const searchTerms = [...new Set([...intentTerms, ...usageTerms, ...featureTerms, ...messageTerms])];
+    const messageTerms = extractWords(message).slice(0, 8).filter((term) => !/^(dưới|trên|từ|đến|triệu|tr|giá|hơn|ít)$/i.test(term));
+    const budgetOnlyExtracted = Boolean(priceEntity && !extracted.brand && !extracted.usage && !extracted.features && !extracted.storage && !extracted.color && messageTerms.length === 0);
+    const searchTerms = [...new Set([
+        ...(intentName === 'recommend_general' && budgetOnlyExtracted ? [] : intentTerms),
+        ...usageTerms,
+        ...featureTerms,
+        ...(budgetOnlyExtracted ? [] : messageTerms)
+    ])];
 
     searchTerms.forEach((term) => {
         if (!term) return;
@@ -190,16 +235,16 @@ const buildProductQuery = (message, intentName) => {
     return conditions.length === 1 ? conditions[0] : { $and: conditions };
 };
 
-const buildRecommendationFilter = (intentName, message) => {
-    return buildProductQuery(message, intentName);
+const buildRecommendationFilter = (intentName, message, context = {}) => {
+    return buildProductQuery(message, intentName, context);
 };
 
-const buildSearchFilter = (message) => {
-    return buildProductQuery(message, null);
+const buildSearchFilter = (message, context = {}) => {
+    return buildProductQuery(message, null, context);
 };
 
-const scoreProductMatches = (products, message, intentName) => {
-    const entities = entityService.extractEntitiesByIntent(message, intentName);
+const scoreProductMatches = (products, message, intentName, context = {}) => {
+    const entities = mergeEntitiesWithContext(entityService.extractEntitiesByIntent(message, intentName), context);
     const text = (message || '').toLowerCase();
     const productMatches = products.map((product) => {
         let score = 0;
@@ -268,18 +313,30 @@ const scoreProductMatches = (products, message, intentName) => {
         .map((item) => item.product);
 };
 
-const recommendProductsByIntent = async (intentName, message) => {
-    const entities = entityService.extractEntitiesByIntent(message, intentName);
-    const filter = buildRecommendationFilter(intentName, message);
+const findProductRecommendations = async (message, context = {}) => {
+    try {
+        const filter = buildProductQuery(message, null, context);
+        let products = await Product.find(filter).limit(20);
+        products = scoreProductMatches(products, message, null, context).slice(0, 6);
+        return products;
+    } catch (err) {
+        console.error("Error in findProductRecommendations:", err);
+        return [];
+    }
+};
+
+const recommendProductsByIntent = async (intentName, message, context = {}) => {
+    const entities = mergeEntitiesWithContext(entityService.extractEntitiesByIntent(message, intentName), context);
+    const filter = buildRecommendationFilter(intentName, message, context);
 
     try {
         let products = await Product.find(filter).limit(20);
-        products = scoreProductMatches(products, message, intentName).slice(0, 6);
+        products = scoreProductMatches(products, message, intentName, context).slice(0, 6);
 
         if (products.length < 3) {
-            const fallbackQuery = buildProductQuery(message, null);
+            const fallbackQuery = buildProductQuery(message, null, context);
             products = await Product.find(fallbackQuery).limit(20);
-            products = scoreProductMatches(products, message, intentName).slice(0, 6);
+            products = scoreProductMatches(products, message, intentName, context).slice(0, 6);
         }
 
         console.log(`[Entity Extraction] Intent: ${intentName}, Entities:`, entities);
@@ -288,10 +345,10 @@ const recommendProductsByIntent = async (intentName, message) => {
             return products;
         }
 
-        return await findProductRecommendations(message);
+        return await findProductRecommendations(message, context);
     } catch (err) {
         console.error('Error in recommendProductsByIntent:', err);
-        return await findProductRecommendations(message);
+        return await findProductRecommendations(message, context);
     }
 };
 
@@ -887,18 +944,6 @@ const findPolicyAnswer = (message) => {
     return null;
 };
 
-const findProductRecommendations = async (message) => {
-    try {
-        const filter = buildProductQuery(message, null);
-        let products = await Product.find(filter).limit(20);
-        products = scoreProductMatches(products, message, null).slice(0, 6);
-        return products;
-    } catch (err) {
-        console.error("Error in findProductRecommendations:", err);
-        return [];
-    }
-};
-
 const getSessionIntent = (chat, currentIntent) => {
     if (!chat || !chat.currentIntent) return currentIntent;
     const sessionIntent = intentService.getIntentByName(chat.currentIntent);
@@ -912,6 +957,35 @@ const getSessionIntent = (chat, currentIntent) => {
     return currentIntent;
 };
 
+const buildSessionContext = (chat, chatHistory = []) => {
+    const slots = slotFillingService.buildSlotFillingContext(chatHistory);
+    if (chat?.memory) {
+        if (!slots.budget && chat.memory.budget) slots.budget = chat.memory.budget;
+        if (!slots.brand && chat.memory.preferred_brand) slots.brand = chat.memory.preferred_brand;
+        if (!slots.usage && chat.memory.usage) slots.usage = chat.memory.usage;
+        if (!slots.rejected_products && chat.memory.rejected_products) slots.rejected_products = chat.memory.rejected_products;
+    }
+    return slots;
+};
+
+const shouldReuseSessionIntent = (chat, detectedIntent, message) => {
+    if (!chat || !chat.currentIntent) return false;
+    const sessionIntent = intentService.getIntentByName(chat.currentIntent);
+    if (!sessionIntent || sessionIntent.group !== 'sales') return false;
+
+    if (detectedIntent.name === 'recommend_general' || detectedIntent.name === 'fallback') {
+        const entities = entityService.extractEntitiesByIntent(message, detectedIntent.name);
+        const onlyBudget = Boolean(entities.budget)
+            && !entities.brand
+            && !entities.usage
+            && !entities.features
+            && !entities.storage
+            && !entities.color;
+        return onlyBudget;
+    }
+    return false;
+};
+
 const generateChatResponse = async (userMessage, userId) => {
     const lowerMessage = (userMessage || '').toLowerCase();
     let intent = { name: 'fallback', score: 0, group: 'system' };
@@ -923,9 +997,14 @@ const generateChatResponse = async (userMessage, userId) => {
         console.error('Error fetching chat for session context:', err);
     }
 
+    let detectedIntent = null;
     try {
-        intent = intentService.detectIntent(userMessage || '');
-        intent = getSessionIntent(chat, intent);
+        detectedIntent = intentService.detectIntent(userMessage || '');
+        intent = getSessionIntent(chat, detectedIntent);
+        if (shouldReuseSessionIntent(chat, detectedIntent, userMessage)) {
+            const sessionIntent = intentService.getIntentByName(chat.currentIntent);
+            if (sessionIntent) intent = sessionIntent;
+        }
     } catch (e) {
         console.error('Intent detection error:', e);
     }
@@ -949,17 +1028,17 @@ const generateChatResponse = async (userMessage, userId) => {
         // Get chat history to check existing slots
         let chatHistory = [];
         try {
-            const chat = await Chat.findOne({ userId }).sort({ createdAt: -1 });
-            if (chat) {
-                chatHistory = chat.messages || [];
+            const sessionChat = await Chat.findOne({ userId }).sort({ createdAt: -1 });
+            if (sessionChat) {
+                chatHistory = sessionChat.messages || [];
             }
         } catch (err) {
             console.error('Error fetching chat history:', err);
         }
 
-        // Build slot context from chat history
-        const currentSlots = slotFillingService.buildSlotFillingContext(chatHistory);
-        
+        // Build slot context from chat history and memory
+        const currentSlots = buildSessionContext(chat, chatHistory);
+
         // Merge new entities into current slots
         if (entities.brand) currentSlots.brand = entities.brand;
         if (entities.budget) currentSlots.budget = entities.budget;
@@ -980,7 +1059,7 @@ const generateChatResponse = async (userMessage, userId) => {
         }
 
         // If slots are sufficient, recommend products
-        const products = await recommendProductsByIntent(intent.name, userMessage);
+        const products = await recommendProductsByIntent(intent.name, userMessage, currentSlots);
         const slotContext = slotFillingService.formatSlotContext(currentSlots);
         
         let response = formatProductListWithEntities(products, currentSlots);
@@ -1072,6 +1151,13 @@ const saveMessage = async (userId, sender, message, slots = {}, meta = {}) => {
         // Auto-reset session
         chat.messages = [];
         chat.slots = {};
+        chat.memory = {
+            budget: null,
+            preferred_brand: null,
+            usage: null,
+            rejected_products: [],
+            previous_intents: []
+        };
         chat.currentIntent = null;
         chat.pendingSlot = null;
         chat.sessionStartedAt = now;
@@ -1090,13 +1176,41 @@ const saveMessage = async (userId, sender, message, slots = {}, meta = {}) => {
         Object.assign(chat.slots, slots);
     }
 
+    if (!chat.memory) {
+        chat.memory = {
+            budget: null,
+            preferred_brand: null,
+            usage: null,
+            rejected_products: [],
+            previous_intents: []
+        };
+    }
+
+    if (chat.slots.budget) {
+        chat.memory.budget = chat.slots.budget;
+    }
+    if (chat.slots.brand) {
+        chat.memory.preferred_brand = chat.slots.brand;
+    }
+    if (chat.slots.usage) {
+        chat.memory.usage = chat.slots.usage;
+    }
+
     if (sender === 'user') {
         const userIntent = meta.intentName ? intentService.getIntentByName(meta.intentName) : null;
+        if (meta.intentName && !chat.memory.previous_intents.includes(meta.intentName)) {
+            chat.memory.previous_intents.push(meta.intentName);
+        }
         if (userIntent && userIntent.group === 'sales') {
             chat.currentIntent = meta.intentName;
         } else if (!chat.pendingSlot) {
             chat.currentIntent = null;
             chat.pendingSlot = null;
+        }
+
+        const rejected = extractRejectedProducts(message);
+        if (rejected.length) {
+            chat.memory.rejected_products = Array.from(new Set([...(chat.memory.rejected_products || []), ...rejected]));
         }
 
         if (chat.pendingSlot && slots && Object.keys(slots).length > 0) {
@@ -1126,6 +1240,15 @@ const resetChatSession = async (userId) => {
     if (chat) {
         chat.messages = [];
         chat.slots = {};
+        chat.memory = {
+            budget: null,
+            preferred_brand: null,
+            usage: null,
+            rejected_products: [],
+            previous_intents: []
+        };
+        chat.currentIntent = null;
+        chat.pendingSlot = null;
         chat.sessionConfirmed = true;
         chat.sessionStartedAt = new Date();
         chat.sessionResetsAt = new Date(Date.now() + 5 * 60 * 1000);
